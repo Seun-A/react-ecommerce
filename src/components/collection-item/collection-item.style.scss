@@ -1,0 +1,44 @@
+.collection-item {
+  width: 25%;
+  min-width: 200px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .collection-footer {
+    background: white;
+    font-size: 18px;
+  }
+}
+
+.collection-item+.collection-item {
+  margin-left: 50px;
+}
+
+
+@media only screen and (max-width: 760px) {  
+  .collection-item {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .menu-item {
+    min-width: 60%;
+    
+    &.large {
+      height: 240px;
+    }
+    .content {
+      padding: 0 25px;
+    }
+  }
+}
