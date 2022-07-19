@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from 'react-router-dom' // Higher Order Function
+// import { withRouter } from 'react-router-dom' // Higher Order Function
 
 import './menu-item.style.scss'
 
