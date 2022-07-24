@@ -1,0 +1,42 @@
+.header {
+  height: 70px;
+  box-shadow: 0 1px 1px 0 rgba($color: #858585, $alpha: 0.2);
+  
+
+  .logo-container {
+    width: 70px;
+
+    .logo {
+      height: 60px;
+    }
+  }
+
+  .options {
+    .option {
+      padding: 10px 15px;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 560px) {  
+  .header {
+    height: 50px;    
+  
+    .logo-container {
+      width: 50px;
+  
+      .logo {
+        height: 50px;
+      }
+    }
+  
+    .options {
+      .option {
+        font-size: 0.8rem;
+        padding: 10px 10px;
+      }
+    }
+  }
+}

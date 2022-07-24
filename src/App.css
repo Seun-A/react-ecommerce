@@ -3,6 +3,16 @@ body {
   margin: 20px 60px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  transition: transform 0.5s;
+}
+a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
 @media only screen and (max-width: 760px) {  
   body {
     margin: 10px 20px;

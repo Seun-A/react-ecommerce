@@ -9,6 +9,8 @@ import {
 
 import './index.css';
 import App from './App';
+import Homepage from './pages/home/homepage.component';
+import ShopPage from './pages/shop/shop.component';
 
 
 
@@ -17,7 +19,19 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route exact path='*' element={<App />} />
+        <Route exact path='/' element={<App />}>
+          <Route index element={<Homepage />} />
+          <Route path='/shop' element={<ShopPage />} />
+          {/* No Match */}
+          <Route 
+            path='*'
+            element = {
+              <div
+                className='d-flex justify-content-center align-items-center fs-2'
+              >** Page In Progress **</div>
+            }
+          />
+        </Route>
 
         {/* No Match */}
         <Route 
