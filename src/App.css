@@ -1,14 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 20px 60px;
 }
 
-a {
+a, .option {
   text-decoration: none;
   color: black;
   transition: transform 0.5s;
 }
-a:hover {
+a:hover, .option:hover {
   color: black;
   transform: scale(1.1);
 }

@@ -34,6 +34,7 @@ class SignIn extends React.Component {
           <FormInput 
             name="email" 
             type='email' 
+            autoComplete='username'
             label='Email'
             value={this.state.email} 
             handleChange={this.handleChange} 
@@ -42,14 +43,17 @@ class SignIn extends React.Component {
           <FormInput 
             name="password" 
             type='password' 
+            autoComplete='current-password'
             label='Password'
             value={this.state.password} 
             handleChange={this.handleChange} 
-            required 
+            required
           /> 
 
-          <Button type='submit'>Sign In</Button>
-          <Button onClick={signInWithGoogle}>Sign In With Google</Button>
+          <div className="d-flex justify-content-between">
+            <Button type='submit'>Sign In</Button>
+            <Button isGoogleSignIn onClick={signInWithGoogle}>Sign In With Google</Button>
+          </div>
         </form>
       </div>
     );
