@@ -4,6 +4,7 @@ import './header.style.scss'
 
 import { ReactComponent as Logo } from '../../assets/cart-svgrepo-com.svg'
 import { auth } from '../../firebase/firebase.utils'
+import { connect } from 'react-redux'
 
 const Header = ({ currentUser }) => (
   <div className='header w-100 mb-3 d-flex justify-content-between'>
@@ -21,4 +22,8 @@ const Header = ({ currentUser }) => (
   </div>
 )
 
-export default Header
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(Header);
