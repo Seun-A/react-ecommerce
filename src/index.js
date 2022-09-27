@@ -6,7 +6,6 @@ import {
   Route 
 } from 'react-router-dom';
 
-
 import './index.css';
 import App from './App';
 import Homepage from './pages/home/homepage.component';
@@ -26,7 +25,13 @@ root.render(
           <Route exact path='/' element={<App />}>
             <Route index element={<Homepage />} />
             <Route path='/shop' element={<ShopPage />} />
-            <Route path='/signin' element={<SignInUpPage />} />
+            <Route 
+              exact
+              path='/signin' 
+              element={
+                <SignInUpPage />  // THIS IS WHERE I WANT MY NAVIGATE TO BE 
+              } 
+            />
             {/* No Match */}
             <Route 
               path='*'
@@ -48,6 +53,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-
-
-

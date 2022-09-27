@@ -21,3 +21,8 @@ The user can see product collections and individual products, sign in and sign u
 ## Functionalities:
 - Google Sign In / Sign Up
 - Email Sign In / Sign Up
+
+<!--
+PERSONAL BACKLOG: 
+- React Router Navigate 
+-->

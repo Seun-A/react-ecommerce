@@ -1,8 +1,9 @@
+import './sign-in.style.scss'
 import React from "react";
+import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
+
 import Button from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
-import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
-import './sign-in.style.scss'
 
 class SignIn extends React.Component {
   constructor() {
@@ -68,5 +69,6 @@ class SignIn extends React.Component {
     );
   }
 }
+
 
 export default SignIn;
