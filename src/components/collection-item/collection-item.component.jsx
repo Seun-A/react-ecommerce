@@ -7,7 +7,7 @@ import Button from '../button/button.component'
 
 
 const CollectionItem = ({ item, addItem }) => {
-  const { name, imageUrl, price } = item;
+  const { name, imageUrl, price } = item
 
   return (
   <div className="collection-item pb-3 d-flex flex-column align-items-center">
@@ -33,4 +33,4 @@ const matchDispatchToProps = dispatch => ({
 export default connect(
   null,
   matchDispatchToProps
-)(CollectionItem)
+)(CollectionItem);

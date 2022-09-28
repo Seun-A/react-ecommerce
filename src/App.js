@@ -1,11 +1,19 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { setCurrentUser } from './redux/user/user.actions'
-import { Outlet } from 'react-router-dom';
-import './App.css';
+import './App.css'
 
-import Header from './components/header/header.component';
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+
+import { connect } from 'react-redux'
+import { setCurrentUser } from './redux/user/user.actions'
+
+import { createStructuredSelector } from 'reselect'
+import { selectCurrentUser } from './redux/user/user.selectors'
+
+import { auth, createUserProfileDocument } from './firebase/firebase.utils'
+
+import Header from './components/header/header.component'
+
+
 
 class App extends React.Component {
   unsubscribeFromAuth = null
@@ -15,17 +23,17 @@ class App extends React.Component {
     
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth); 
+        const userRef = await createUserProfileDocument(userAuth) 
         
         userRef.onSnapshot(snapShot => {
           setCurrentUser({
             id: snapShot.id, 
             ...snapShot.data()
-          });
+          })
           // console.log(this.state) // Test to check current user
-        }); 
+        }) 
       } 
-      setCurrentUser(userAuth); 
+      setCurrentUser(userAuth) 
     })
   }
   
@@ -39,12 +47,12 @@ class App extends React.Component {
         <Header />
         <Outlet />
       </div>
-    );
+    )
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({

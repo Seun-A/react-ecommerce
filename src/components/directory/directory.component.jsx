@@ -1,5 +1,5 @@
-import React from "react";
-import MenuItem from "../menu-item/menu-item.component";
+import React from "react"
+import MenuItem from "../menu-item/menu-item.component"
 
 // Images
 import hats from './images/hats.jpg'
@@ -71,6 +71,6 @@ export default class Directory extends React.Component {
           }
         </div>
       </div>
-    );
+    )
   }
 }

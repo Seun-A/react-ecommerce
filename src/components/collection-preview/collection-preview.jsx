@@ -1,5 +1,5 @@
-import React from "react";
-import CollectionItem from "../collection-item/collection-item.component";
+import React from "react"
+import CollectionItem from "../collection-item/collection-item.component"
 import './collection-preview.style.scss'
 
 const CollectionPreview = ({ title, items }) => (
@@ -17,4 +17,4 @@ const CollectionPreview = ({ title, items }) => (
   </div>
 )
 
-export default CollectionPreview
+export default CollectionPreview;
