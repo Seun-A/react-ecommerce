@@ -14,7 +14,6 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import Header from './components/header/header.component'
 
 
-
 class App extends React.Component {
   unsubscribeFromAuth = null
   
@@ -30,7 +29,6 @@ class App extends React.Component {
             id: snapShot.id, 
             ...snapShot.data()
           })
-          // console.log(this.state) // Test to check current user
         }) 
       } 
       setCurrentUser(userAuth) 

@@ -8,7 +8,7 @@ import mens from './images/mens.jpg'
 
 const INITIAL_STATE = {
   sections : [{
-    title: 'hats', 
+      title: 'hats', 
       imageUrl: hats, 
       id: 1, 
       linkUrl: 'hats'

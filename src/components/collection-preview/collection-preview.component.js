@@ -8,7 +8,7 @@ const CollectionPreview = ({ title, items }) => (
     <div className="preview d-flex overflow-auto">
       {
         items
-        .filter((item, idx) => idx < 10 )
+        .filter((item, idx) => idx < 5 )
         .map(item => (
           <CollectionItem key={item.id} item={item} />
         ))

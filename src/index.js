@@ -28,7 +28,7 @@ root.render(
           <Routes>
             <Route exact path='/' element={<App />}>
               <Route index element={<Homepage />} />
-              <Route path='/shop' element={<ShopPage />} />
+              <Route path='/shop/*' element={<ShopPage />} />
               <Route 
                 exact
                 path='/signin' 

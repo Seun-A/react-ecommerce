@@ -1,9 +1,9 @@
 import './menu-item.style.scss'
 import { useNavigate } from "react-router-dom"
 
-const MenuItem = ({ title, imageUrl, size }) => {
+const MenuItem = ({ title, imageUrl, size, linkUrl }) => {
   let history = useNavigate()
-  const toShop = () => history('/shop')
+  const toShop = () => history(`/shop/${linkUrl}`)
   
   return (
     <div className={`col p-0 menu-item ${size}`} onClick={toShop}>
