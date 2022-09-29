@@ -1,21 +1,24 @@
-import React from "react";
-// import { withRouter } from 'react-router-dom' // Higher Order Function
-
 import './menu-item.style.scss'
+import { useNavigate } from "react-router-dom"
 
-const MenuItem = ({ title, imageUrl, size }) => (
-  <div className={`col p-0 menu-item ${size}`}>
-    <div 
-      className="background-image"
-      style={{
-        backgroundImage: `url(${imageUrl})`
-      }}
-    />
-    <div className="content">
-      <h1 className="title">{ title.toUpperCase() }</h1>
-      <span className="subtitle">SHOP NOW</span>
-    </div>          
-  </div>
-)
+const MenuItem = ({ title, imageUrl, size }) => {
+  let history = useNavigate()
+  const toShop = () => history('/shop')
+  
+  return (
+    <div className={`col p-0 menu-item ${size}`} onClick={toShop}>
+      <div 
+        className="background-image"
+        style={{
+          backgroundImage: `url(${imageUrl})`
+        }}
+      />
+      <div className="content">
+        <h1 className="title">{ title.toUpperCase() }</h1>
+        <span className="subtitle">SHOP NOW</span>
+      </div>          
+    </div>
+  )
+}
 
 export default MenuItem;
