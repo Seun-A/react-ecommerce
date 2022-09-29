@@ -15,7 +15,7 @@ import SignInUpPage from './pages/sign-in-up/sign-in-up.component'
 import CheckoutPage from './pages/checkout/checkout.component'
 
 import { Provider } from 'react-redux'
-import { PersistGate } from 'redux-persist/integration/react';
+import { PersistGate } from 'redux-persist/integration/react'
 import { store, persistor } from './redux/store'
  
 
