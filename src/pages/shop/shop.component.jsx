@@ -3,7 +3,7 @@ import CollectionOverview from "../../components/collection-overview/collection-
 import CollectionPage from "../collection/collection.component"
 
 const ShopPage = () => (
-  <div className="shop-page">
+  <div className='shop-page'>
     <Routes>
       <Route exact path={`/`} element={<CollectionOverview />} />
       <Route exact path={`:collectionId`} element={<CollectionPage />} />
