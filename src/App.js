@@ -14,6 +14,7 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import Header from './components/header/header.component'
 
 
+
 class App extends React.Component {
   unsubscribeFromAuth = null
   
