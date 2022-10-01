@@ -7,6 +7,11 @@ body {
   margin: 20px 60px;
 }
 
+.App {
+  padding-top: 70px;
+}
+
+
 a, .option {
   text-decoration: none;
   color: black;

@@ -1,6 +1,14 @@
 .header {
-  height: 70px;
+  width: calc(100vw - 120px);
+  height: 80px;
+  
+  background: white;
   box-shadow: 0 1px 1px 0 rgba($color: #858585, $alpha: 0.2);
+  padding-top: 20px;
+
+  position: fixed;
+  top: 0px;
+  z-index: 10;
 
   .logo-container {
     width: 70px;
@@ -17,16 +25,22 @@
 
 
 
-@media only screen and (max-width: 560px) {  
+@media screen and (max-width: 760px) {
   .header {
-    height: 50px;    
-  
+    width: calc(100vw - 40px);
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .header {
+    height: 70px;
+
     .logo-container {
       width: 50px;
-  
+
       .logo { height: 50px; }
     }
-  
+
     .options .option { padding: 10px 10px; }
   }
 }

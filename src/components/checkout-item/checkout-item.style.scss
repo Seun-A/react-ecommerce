@@ -14,5 +14,10 @@
     .arrow { cursor: pointer; }
 
     &:last-child { width: 50px; cursor: pointer; }
+
+    img {
+      background: red;
+      padding: 20px;
+    }
   }
 }

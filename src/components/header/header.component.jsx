@@ -14,7 +14,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component'
 
 
 const Header = ({ currentUser, hidden }) => (
-  <div className='header w-100 mb-3 d-flex justify-content-between'>
+  <div className='header mb-3 d-flex justify-content-between'>
     <Link className='logo-container h-100 p-2 d-flex align-items-center' to="/"><Logo className='logo' /></Link>
     <div className='options w-75 h-100 d-flex align-items-center justify-content-end'>
       <Link className='option' to='/shop'>SHOP</Link>
