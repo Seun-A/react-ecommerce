@@ -18,7 +18,7 @@
 
   .collection-footer { font-size: 18px; }
 
-  .custom-btn {
+  button {
     width: 80%;
     position: absolute;
     top: 65%;
@@ -29,7 +29,7 @@
   &:hover {
     .image { opacity: 0.8; }
 
-    .custom-btn {
+    button {
       opacity: 0.7;
       visibility: visible;
     }
@@ -42,7 +42,7 @@
   .collection-item {
     height: 250px;
   
-    .custom-btn { top: 55%; }
+    button { top: 55%; }
   }
 }
 

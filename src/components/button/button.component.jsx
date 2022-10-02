@@ -1,18 +1,12 @@
-import './button.style.scss'
+import { BtnContainer } from './button.style'
 
-const Button = ({ children, isGoogleSignIn, inverted, ...otherProps }) => (
-  <button
-    className={`
-      custom-btn
-      d-flex justify-content-center
-      fw-bold text-uppercase
-      ${ isGoogleSignIn ? 'google-sign-in' : '' }
-      ${ inverted ? 'inverted' : '' }
-    `}
+const Button = ({ children, ...otherProps }) => (
+  <BtnContainer
+    className='d-flex justify-content-center fw-bold text-uppercase'
     { ...otherProps }
   >
     { children }
-  </button>
+  </BtnContainer>
 )
 
 export default Button;

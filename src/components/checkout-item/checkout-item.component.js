@@ -9,7 +9,7 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   return (
   <div className='checkout-item w-100 d-flex align-items-center justify-content-between align-self-start'>
     <div className='pe-3'>
-      <img src={imageUrl} alt='item' className='w-100 h-100' />
+      <img src={imageUrl} alt='item' className='w-100 h-100 p-2' />
     </div>
 
     <div>{name}</div>

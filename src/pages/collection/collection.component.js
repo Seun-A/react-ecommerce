@@ -1,4 +1,4 @@
-import './collection.style.scss'
+import './collection.style.css'
 
 import { useParams } from 'react-router-dom'
 
