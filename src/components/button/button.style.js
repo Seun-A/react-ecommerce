@@ -23,11 +23,11 @@ const googleSignInBtn = css`
 `
 
 const getBtnStyles = props => {
-  if (props.isGoogleSignIn) {
-    return googleSignInBtn
-  }
-
-  return props.inverted ? invertedBtnStyles : null
+  return props.isGoogleSignIn
+    ? googleSignInBtn
+    : props.inverted
+      ? invertedBtnStyles
+      : null
 }
 
 

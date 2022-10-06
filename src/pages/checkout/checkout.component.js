@@ -25,7 +25,7 @@ const CheckoutPage = ({ cartItems, total }) => (
     { cartItems.map(cartItem => <CheckoutItem key={cartItem.id} cartItem={cartItem} />) }
 
     <CheckoutTotal className='ms-auto mt-4'>TOTAL: ${total}</CheckoutTotal>
-    <div className='d-none test-warning text-center text-danger my-4 fs-3'>
+    <div className='test-warning text-center text-danger my-4 fs-5'>
       *Please use the following test credit card for payments* <br />
       Card No.: <strong>4242 4242 4242 4242</strong> <br />
       EXP: <strong>Any Future Date</strong>; 
