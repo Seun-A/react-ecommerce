@@ -24,14 +24,27 @@ const CheckoutPage = ({ cartItems, total }) => (
 
     { cartItems.map(cartItem => <CheckoutItem key={cartItem.id} cartItem={cartItem} />) }
 
+    {
+      total ? null :
+      <div className='my-5 py-2 fs-2'>
+        Your cart is Empty
+      </div>
+    }
+
     <CheckoutTotal className='ms-auto mt-4'>TOTAL: ${total}</CheckoutTotal>
-    <div className='test-warning text-center text-danger my-4 fs-5'>
-      *Please use the following test credit card for payments* <br />
-      Card No.: <strong>4242 4242 4242 4242</strong> <br />
-      EXP: <strong>Any Future Date</strong>; 
-      CVV: <strong>Any 3 Digits</strong>
-    </div>
-    <StripeBtn price={total} />
+    {
+      total ?
+      <>
+        <div className='text-center text-danger my-4 fs-5'>
+          *Please use the following test credit card for payments* <br />
+          Card No.: <strong>4242 4242 4242 4242</strong> <br />
+          EXP: <strong>Any Future Date</strong>; 
+          CVV: <strong>Any 3 Digits</strong>
+        </div>
+        <StripeBtn price={total} />
+      </>
+      : null
+    }
   </CheckoutContainer>
 )
 
