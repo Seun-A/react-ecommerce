@@ -27,12 +27,3 @@ The user can see product collections and individual products, sign in and sign u
 - Checkout
 - Payment (Stripe Integration)
 
-# 
-
-## For Developers: 
-
-
-<!--
-PERSONAL BACKLOG: 
-- React Router Navigate 
--->
